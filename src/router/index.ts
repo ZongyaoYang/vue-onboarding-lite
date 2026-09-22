@@ -5,9 +5,9 @@ const router = createRouter({
   history: createWebHistory(),
   routes: [
     { path: '/', redirect: '/members' },
-    { path: 'login', name: 'login', component: () => import('@/views/LoginView.vue') },
+    { path: '/login', name: 'login', component: () => import('@/views/LoginView.vue') },
     {
-      path: 'members',
+      path: '/members',
       name: 'members',
       component: () => import("@/views/LoginView.vue"),
       meta: { requiresAuth: true },
