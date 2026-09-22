@@ -73,8 +73,8 @@ async function onSubmit() {
             <label for="password">Password</label>
             <input id="password" v-model="form.password" type="password" autocomplete="current-password"
                 :aria-invalid="submitted && !!errors.password"
-                :aria-describedby="submitted && errors.password ? 'password-error' : 'undefined'" />
-            <p v-if="submitted && errors.password" id="email-error" class="error">{{ errors.password }}</p>
+                :aria-describedby="submitted && errors.password ? 'password-error' : undefined" />
+            <p v-if="submitted && errors.password" id="password-error" class="error">{{ errors.password }}</p>
         </div>
 
         <p v-if="serverError" role="alert" class="error">{{ serverError }}</p>
